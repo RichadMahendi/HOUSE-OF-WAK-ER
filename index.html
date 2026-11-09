@@ -1,0 +1,233 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HOUSE OF WAK ER</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVIGATION -->
+    <header class="navbar">
+        <div class="logo">HOUSE <span>OF</span> WAK ER</div>
+
+        <nav>
+            <a href="#" onclick="showHome(); return false;">Home</a>
+            <a href="#memories" onclick="showHome(); return true;">Memories</a>
+            <a href="#" onclick="showGallery(); return false;">Gallery</a>
+            <a href="#arcade" onclick="showHome(); return true;">Arcade</a>
+        </nav>
+
+        <div class="nav-label">OUR FAMILY SPACE</div>
+    </header>
+
+
+    <main>
+
+        <!-- =========================
+             HOME PAGE
+        ========================== -->
+        <div id="homePage">
+
+            <!-- HERO -->
+            <section class="hero" id="home">
+
+                <div class="hero-content">
+                    <p class="eyebrow">EST. WITH LOVE · OUR FAMILY</p>
+
+                    <h1>
+                        Every Family<br>
+                        Has A <span>Story.</span>
+                    </h1>
+
+                    <p class="description">
+                        A little place where our stories live,
+                        our memories remain, and every moment
+                        finds its way home.
+                    </p>
+
+                    <a href="#memories" class="explore-btn">
+                        EXPLORE OUR MEMORIES ↗
+                    </a>
+                </div>
+
+                <div class="hero-art">
+                    <div class="art-frame">
+                    <div class="art-inner hero-photo-frame">
+
+    <img
+        src="images/ibu.jpg"
+        alt="Our Beloved Mother"
+        class="hero-family-photo"
+    >
+
+</div>
+                    </div>
+
+                    <span class="art-decoration">W</span>
+                </div>
+
+                <div class="hero-bottom">
+                    <span>MADE FOR THE PEOPLE WE LOVE</span>
+                    <span>SCROLL TO DISCOVER ↓</span>
+                </div>
+
+            </section>
+
+
+            <!-- MEMORIES -->
+            <section class="memories" id="memories">
+
+                <p class="eyebrow">A COLLECTION OF MOMENTS</p>
+
+                <h2>Memories That <span>Stay.</span></h2>
+
+                <p>
+                    Some moments pass, but the memories
+                    will always have a place here.
+                </p>
+
+            </section>
+
+
+        </div>
+        <!-- HOME PAGE SELESAI -->
+
+
+        <!-- =========================
+             GALLERY PAGE
+        ========================== -->
+        <section class="gallery-page" id="galleryPage" hidden>
+
+            <div class="gallery-heading">
+                <div>
+                    <p class="eyebrow">OUR PERSONAL COLLECTION</p>
+                    <h2>Little Moments, <span>Forever.</span></h2>
+                </div>
+
+                <p class="gallery-description">
+                    A collection of beautiful moments
+                    shared with the people we love.
+                </p>
+            </div>
+
+
+            <div class="gallery-grid">
+
+                <!-- FAMILY MOMENTS -->
+                <article class="album-card" onclick="openAlbum('family')">
+
+                    <div class="album-cover cover-family">
+                        <span class="album-number">01</span>
+
+                        <img
+                            src="images/family-animation.gif"
+                            class="album-art"
+                            alt="Family Moments Animation"
+                        >
+
+                        <span class="album-name">Family Moments</span>
+                    </div>
+
+                    <div class="album-info">
+                        <h3>Family Moments</h3>
+                        <p>Our people, our home.</p>
+                    </div>
+
+                </article>
+
+
+                <!-- OUR JOURNEY -->
+                <article class="album-card" onclick="openAlbum('journey')">
+
+                    <div class="album-cover cover-journey">
+                        <span class="album-number">02</span>
+                        <span class="album-art">J</span>
+                        <span class="album-name">Our Journey</span>
+                    </div>
+
+                    <div class="album-info">
+                        <h3>Our Journey</h3>
+                        <p>Every place, every story.</p>
+                    </div>
+
+                </article>
+
+
+                <!-- SPECIAL DAYS -->
+                <article class="album-card" onclick="openAlbum('special')">
+
+                    <div class="album-cover cover-special">
+                        <span class="album-number">03</span>
+                        <span class="album-art">S</span>
+                        <span class="album-name">Special Days</span>
+                    </div>
+
+                    <div class="album-info">
+                        <h3>Special Days</h3>
+                        <p>Moments worth remembering.</p>
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+        <!-- GALLERY PAGE SELESAI -->
+
+
+        <!-- =========================
+             ALBUM PAGE
+        ========================== -->
+        <section class="album-view" id="albumView" hidden>
+
+            <button class="back-button" onclick="closeAlbum()">
+                ← BACK TO GALLERY
+            </button>
+
+            <p class="eyebrow">OUR FAMILY COLLECTION</p>
+
+            <h2 id="albumTitle">Family Moments</h2>
+
+            <div class="photo-grid" id="photoGrid"></div>
+
+        </section>
+        <!-- ALBUM PAGE SELESAI -->
+
+
+        <!-- =========================
+             PHOTO LIGHTBOX
+        ========================== -->
+        <div class="lightbox" id="photoLightbox" hidden>
+
+            <button class="lightbox-close" onclick="closePhoto()">
+                ×
+            </button>
+
+            <img
+                id="lightboxImage"
+                src=""
+                alt="Family Memory"
+            >
+
+        </div>
+
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer>
+        HOUSE OF WAK ER © 2026
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+    <script src="script.js"></script>
+
+</body>
+</html>
